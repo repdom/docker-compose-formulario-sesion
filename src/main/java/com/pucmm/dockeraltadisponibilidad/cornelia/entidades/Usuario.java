@@ -7,18 +7,8 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable {
     @Id
-    private String codigo;
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String usuario;
     private String contraisenia;
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
 
     public String getUsuario() {
         return usuario;
