@@ -1,10 +1,12 @@
 package com.pucmm.dockeraltadisponibilidad.cornelia.entidades;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
+@Entity
 public class Usuario implements Serializable {
     @Id
     private String usuario;
