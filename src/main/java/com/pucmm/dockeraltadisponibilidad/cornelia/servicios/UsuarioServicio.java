@@ -4,9 +4,11 @@ import com.pucmm.dockeraltadisponibilidad.cornelia.entidades.Usuario;
 import com.pucmm.dockeraltadisponibilidad.cornelia.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class UsuarioServicio {
 
     @Autowired

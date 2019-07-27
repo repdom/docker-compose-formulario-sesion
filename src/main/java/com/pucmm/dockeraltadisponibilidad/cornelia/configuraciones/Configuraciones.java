@@ -55,23 +55,25 @@ public class Configuraciones extends WebSecurityConfigurerAdapter {
                         "/**/*.jsp",
                         "/**/*.do")
                 .permitAll()
-                .antMatchers("/login/**")
+                .antMatchers("/**")
                 .permitAll()
-                .antMatchers("/registration/**")
+                .antMatchers("/formulario/**")
+                .permitAll()
+                .antMatchers("/submit/**")
                 .permitAll()
                 .antMatchers("/register/**")
                 .permitAll()
                 .antMatchers("/check/**")
                 .permitAll()
                 .anyRequest()
-                .authenticated();
-                /*.and()
+                .permitAll()
+                .and()
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();*/
+                .permitAll();
 
         http.headers().frameOptions().disable();
     }

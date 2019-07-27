@@ -23,32 +23,34 @@ public class FormularioController {
     @Autowired
     UsuarioServicio usuarioServicio;
 
-    /*@RequestMapping("")
-    public ModelAndView indice(@CurrentUsuario UsuarioPrincipal, ModelAndView model) {
+    @RequestMapping("formulario")
+    public ModelAndView indice(@CurrentUsuario UsuarioPrincipal usuarioPrincipal, ModelAndView model) {
+        entidadPublica entidadPublica = new entidadPublica();
 
-    }*/
+        model.addObject("formulario", entidadPublica);
+        model.addObject("usuario", usuarioPrincipal);
+        model.setViewName("formulario");
+
+        return model;
+    }
 
     @RequestMapping(value = "/submit", method = RequestMethod.POST)
-    public String submit(@Valid entidadPublica entidadPublica, @CurrentUsuario UsuarioPrincipal usuarioPrincipal) {
-        Usuario usuario = usuarioServicio.getUsuario(usuarioPrincipal.getUsername()).orElse(null);
+    public String submit(@Valid entidadPublica entidadPublica) {
+        /*Usuario usuario = usuarioServicio.getUsuario(usuarioPrincipal.getUsername()).orElse(null);
         if(usuario.getUsuario() != null) {
             return "redirect:/";
-        }
+        }*/
+
+        System.out.println(entidadPublica.resultado1);
 
         Formulario formulario = new Formulario();
-        formulario.setPregunta1(entidadPublica.pregunta1);
         formulario.setResultado1(entidadPublica.resultado1);
-        formulario.setPregunta2(entidadPublica.pregunta2);
         formulario.setResultado2(entidadPublica.resultado2);
-        formulario.setPregunta3(entidadPublica.pregunta3);
-        formulario.setPregunta4(entidadPublica.pregunta4);
-        formulario.setPregunta5(entidadPublica.pregunta5);
         formulario.setResultado3(entidadPublica.resultado3);
         formulario.setResultado4(entidadPublica.resultado4);
-        formulario.setResultado5(entidadPublica.resultado5);
 
         formularioServicio.guardar(formulario);
 
-        return "redirect:/";
+        return "redirect:/formulario";
     }
 }
