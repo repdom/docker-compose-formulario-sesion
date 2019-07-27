@@ -1,9 +1,6 @@
 package com.pucmm.dockeraltadisponibilidad.cornelia.entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -11,7 +8,7 @@ public class Formulario implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    Integer codigo;
+    Long codigo;
     String pregunta1;
     Integer resultado1;
     String pregunta2;
@@ -22,6 +19,10 @@ public class Formulario implements Serializable {
     Integer resultado4;
     String pregunta5;
     Integer resultado5;
+
+    @OneToOne(targetEntity = Usuario.class)
+    @JoinColumn(name = "usuario_codigo", nullable = false)
+    private Usuario usuario;
 
     public String getPregunta1() {
         return pregunta1;
@@ -103,11 +104,19 @@ public class Formulario implements Serializable {
         this.resultado5 = resultado5;
     }
 
-    public Integer getCodigo() {
+    public Long getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(Long codigo) {
         this.codigo = codigo;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
