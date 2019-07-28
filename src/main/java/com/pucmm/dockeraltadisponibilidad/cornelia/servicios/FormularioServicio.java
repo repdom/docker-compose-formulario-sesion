@@ -27,4 +27,18 @@ public class FormularioServicio {
     public Formulario guardar(Formulario formulario) {
         return formularioRepository.save(formulario);
     }
+
+    public Integer contarResultado1() {
+        return formularioRepository.countByResultado1();
+    }
+
+    public Integer contarResultado2() {
+        return formularioRepository.countByResultado2();
+    }
+    public Integer contarResultado3() {
+        return formularioRepository.countByResultado3();
+    }
+    public Integer contarResultado4() {
+        return formularioRepository.countByResultado4();
+    }
 }

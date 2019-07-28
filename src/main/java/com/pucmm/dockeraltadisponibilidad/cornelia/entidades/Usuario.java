@@ -12,6 +12,15 @@ public class Usuario implements Serializable {
     private String usuario;
     private String contraisenia;
 
+    public Usuario() {
+
+    }
+
+    public Usuario(String usuario, String contraisenia) {
+        this.usuario = usuario;
+        this.contraisenia = contraisenia;
+    }
+
     public String getUsuario() {
         return usuario;
     }

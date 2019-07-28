@@ -10,48 +10,52 @@
     <title>Formulario</title>
 </head>
 <body>
-    <form action="/submit" method="post">
-        <div class="form-group">
-            <label for="expetativa1">¿ Las charlas donde usted participó cumplieron con sus expectativas?</label>
-            <select class="form-control" id="resultado1" name="resultado1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="expetativa2">¿Los expositores mostraron tener dominio del tema?</label>
-            <select class="form-control" id="resultado2" name="resultado2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="expetativa3">¿Las instalaciones del evento fueron confortables para usted?</label>
-            <select class="form-control" id="resultado3" name="resultado3">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="expetativa4">¿Tiene algún comentario para los organizadores?</label>
-            <select class="form-control" id="resultado4"  name="resultado4">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary my-1">Submit</button>
-    </form>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <form action="/submit" method="get">
+            <div class="form-group">
+                <label for="expetativa1">¿ Las charlas donde usted participó cumplieron con sus expectativas?</label>
+                <select class="form-control" id="resultado1" name="resultado1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="expetativa2">¿Los expositores mostraron tener dominio del tema?</label>
+                <select class="form-control" id="resultado2" name="resultado2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="expetativa3">¿Las instalaciones del evento fueron confortables para usted?</label>
+                <select class="form-control" id="resultado3" name="resultado3">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="expetativa4">¿Tiene algún comentario para los organizadores?</label>
+                <select class="form-control" id="resultado4"  name="resultado4">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

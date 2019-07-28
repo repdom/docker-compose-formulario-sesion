@@ -14,7 +14,7 @@ public class UsuarioPrincipal implements UserDetails {
 
     public UsuarioPrincipal(String username, String password) {
         this.usuario = username;
-        this.usuario = password;
+        this.contraisenia = password;
     }
 
     public static UsuarioPrincipal crear(Usuario usuario) {
