@@ -1,6 +1,6 @@
-version '2'
-
+version: '2'
 services:
+
   cornelia-service:
     restart: always
     image: repdom/docker-cornelia-app
